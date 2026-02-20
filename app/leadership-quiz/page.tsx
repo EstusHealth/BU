@@ -7,25 +7,85 @@ import Link from "next/link";
 
 const QUESTIONS = [
   // Transformational
-  { id: "q1", text: "I inspire others by sharing a compelling vision for the future.", dimension: "transformational" },
-  { id: "q2", text: "I encourage my team to challenge assumptions and think creatively.", dimension: "transformational" },
-  { id: "q3", text: "I take time to understand each person's individual needs and motivations.", dimension: "transformational" },
+  {
+    id: "q1",
+    text: "When I talk about where OT practice — or my own career — is heading, others feel energized and start to believe in it too.",
+    dimension: "transformational",
+  },
+  {
+    id: "q2",
+    text: "In clinical or team settings, I push people to question conventional OT approaches and design better solutions rather than defaulting to what's always been done.",
+    dimension: "transformational",
+  },
+  {
+    id: "q3",
+    text: "Before I can lead anyone effectively — a patient, a student, a colleague — I take real time to understand what drives them personally.",
+    dimension: "transformational",
+  },
   // Servant
-  { id: "q4", text: "I prioritize the growth and well-being of the people I work with over my own advancement.", dimension: "servant" },
-  { id: "q5", text: "I prefer listening and empowering others rather than directing and controlling.", dimension: "servant" },
-  { id: "q6", text: "I define success by the success of my team, not my own achievements.", dimension: "servant" },
+  {
+    id: "q4",
+    text: "My measure of success as an OT — in a team, a practice, or a project — is whether the people around me are growing and thriving, not just whether I am.",
+    dimension: "servant",
+  },
+  {
+    id: "q5",
+    text: "When working with colleagues or students, I'm more focused on clearing barriers for others than asserting my own authority or expertise.",
+    dimension: "servant",
+  },
+  {
+    id: "q6",
+    text: "If my OT practice or clinical project succeeded but my team felt unsupported or burned out to get there, I would not consider that a real win.",
+    dimension: "servant",
+  },
   // Democratic
-  { id: "q7", text: "I make better decisions when I gather input from everyone involved.", dimension: "democratic" },
-  { id: "q8", text: "I value consensus and shared ownership of outcomes.", dimension: "democratic" },
-  { id: "q9", text: "I actively seek out different perspectives before finalizing a direction.", dimension: "democratic" },
+  {
+    id: "q7",
+    text: "Before making decisions — about a practice model, a client program, or a team structure — I genuinely want input from everyone the decision affects.",
+    dimension: "democratic",
+  },
+  {
+    id: "q8",
+    text: "I believe that when my OT collaborators feel shared ownership over a decision, they are far more committed to making it work.",
+    dimension: "democratic",
+  },
+  {
+    id: "q9",
+    text: "I regularly seek out perspectives different from my own — from clients, other disciplines, and settings outside OT — before locking in a direction.",
+    dimension: "democratic",
+  },
   // Strategic
-  { id: "q10", text: "I enjoy setting long-term goals and breaking them into actionable steps.", dimension: "strategic" },
-  { id: "q11", text: "I am comfortable making difficult trade-off decisions under uncertainty.", dimension: "strategic" },
-  { id: "q12", text: "I naturally think about the big picture before diving into details.", dimension: "strategic" },
+  {
+    id: "q10",
+    text: "I find it natural to map out a 1–5 year vision for my OT career or practice and break it into concrete, prioritized milestones.",
+    dimension: "strategic",
+  },
+  {
+    id: "q11",
+    text: "When time, money, or clinical resources are limited, I'm comfortable making tough trade-off calls — and I don't second-guess them once made.",
+    dimension: "strategic",
+  },
+  {
+    id: "q12",
+    text: "Before starting a new clinical approach, business model, or OT program, I always step back and think through how it fits the larger picture first.",
+    dimension: "strategic",
+  },
   // Coaching
-  { id: "q13", text: "I get genuine satisfaction from helping others develop their skills.", dimension: "coaching" },
-  { id: "q14", text: "I prefer guiding people toward solutions rather than giving them the answer.", dimension: "coaching" },
-  { id: "q15", text: "I invest significant time in giving feedback and mentoring others.", dimension: "coaching" },
+  {
+    id: "q13",
+    text: "I get real satisfaction from helping a fieldwork student, colleague, or new practitioner level up their clinical reasoning or professional confidence.",
+    dimension: "coaching",
+  },
+  {
+    id: "q14",
+    text: "When someone on my team or in my clinic hits a wall, my instinct is to ask questions that help them find the answer — not to hand it to them.",
+    dimension: "coaching",
+  },
+  {
+    id: "q15",
+    text: "I regularly carve out time to give thoughtful, specific feedback and actively support the professional growth of the people around me.",
+    dimension: "coaching",
+  },
 ];
 
 function shuffle<T>(arr: T[]): T[] {

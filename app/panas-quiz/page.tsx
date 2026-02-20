@@ -6,26 +6,126 @@ import LikertQuestion from "@/components/LikertQuestion";
 import Link from "next/link";
 
 const PANAS_ITEMS = [
-  { id: "interested", text: "Interested", type: "positive" },
-  { id: "excited", text: "Excited", type: "positive" },
-  { id: "strong", text: "Strong", type: "positive" },
-  { id: "enthusiastic", text: "Enthusiastic", type: "positive" },
-  { id: "proud", text: "Proud", type: "positive" },
-  { id: "alert", text: "Alert", type: "positive" },
-  { id: "inspired", text: "Inspired", type: "positive" },
-  { id: "determined", text: "Determined", type: "positive" },
-  { id: "attentive", text: "Attentive", type: "positive" },
-  { id: "active", text: "Active", type: "positive" },
-  { id: "distressed", text: "Distressed", type: "negative" },
-  { id: "upset", text: "Upset", type: "negative" },
-  { id: "guilty", text: "Guilty", type: "negative" },
-  { id: "scared", text: "Scared", type: "negative" },
-  { id: "hostile", text: "Hostile", type: "negative" },
-  { id: "irritable", text: "Irritable", type: "negative" },
-  { id: "ashamed", text: "Ashamed", type: "negative" },
-  { id: "nervous", text: "Nervous", type: "negative" },
-  { id: "jittery", text: "Jittery", type: "negative" },
-  { id: "afraid", text: "Afraid", type: "negative" },
+  {
+    id: "interested",
+    text: "Interested",
+    scenario: "I feel a genuine curiosity pulling me in — like I want to understand or explore something more deeply right now.",
+    type: "positive",
+  },
+  {
+    id: "excited",
+    text: "Excited",
+    scenario: "There's an energized anticipation in me — like something I care about is unfolding and building toward something real.",
+    type: "positive",
+  },
+  {
+    id: "strong",
+    text: "Strong",
+    scenario: "I feel capable and solid — like I have the physical and mental resources to handle what's in front of me today.",
+    type: "positive",
+  },
+  {
+    id: "enthusiastic",
+    text: "Enthusiastic",
+    scenario: "I feel genuinely fired up — eager to throw myself into something and bring real energy to it.",
+    type: "positive",
+  },
+  {
+    id: "proud",
+    text: "Proud",
+    scenario: "I feel a quiet confidence in something I've done or who I'm becoming — a sense of earned satisfaction.",
+    type: "positive",
+  },
+  {
+    id: "alert",
+    text: "Alert",
+    scenario: "I feel mentally sharp and switched on — like I'm picking up on cues around me and processing them quickly and clearly.",
+    type: "positive",
+  },
+  {
+    id: "inspired",
+    text: "Inspired",
+    scenario: "Something has sparked a sense of purpose or creative energy in me — I feel moved to act or think differently than I did before.",
+    type: "positive",
+  },
+  {
+    id: "determined",
+    text: "Determined",
+    scenario: "I feel a steady resolve — I know what I'm working toward and I'm not letting obstacles stop me.",
+    type: "positive",
+  },
+  {
+    id: "attentive",
+    text: "Attentive",
+    scenario: "I feel focused and present — tracking what's happening around me with care and awareness, not drifting.",
+    type: "positive",
+  },
+  {
+    id: "active",
+    text: "Active",
+    scenario: "I feel in motion — physically and mentally energized, engaged in what's in front of me rather than passive or withdrawn.",
+    type: "positive",
+  },
+  {
+    id: "distressed",
+    text: "Distressed",
+    scenario: "I feel troubled or overwhelmed — like things are going wrong and I'm struggling to stay on top of it all.",
+    type: "negative",
+  },
+  {
+    id: "upset",
+    text: "Upset",
+    scenario: "Something has unsettled or bothered me emotionally — I feel stirred up and not at ease right now.",
+    type: "negative",
+  },
+  {
+    id: "guilty",
+    text: "Guilty",
+    scenario: "I feel like I've done something wrong or let someone down — a weight of self-blame is sitting with me right now.",
+    type: "negative",
+  },
+  {
+    id: "scared",
+    text: "Scared",
+    scenario: "I feel a real sense of fear — something specific feels genuinely threatening or dangerous to me right now.",
+    type: "negative",
+  },
+  {
+    id: "hostile",
+    text: "Hostile",
+    scenario: "I feel an edge of irritation or resentment — a sharpness in how I'm responding to people or situations around me.",
+    type: "negative",
+  },
+  {
+    id: "irritable",
+    text: "Irritable",
+    scenario: "Small things feel more of an annoyance than usual — I'm quicker to frustration than I'd like to be.",
+    type: "negative",
+  },
+  {
+    id: "ashamed",
+    text: "Ashamed",
+    scenario: "I feel exposed or embarrassed — like I've fallen short of my own standards or been seen in a way I didn't want.",
+    type: "negative",
+  },
+  {
+    id: "nervous",
+    text: "Nervous",
+    scenario: "I feel on edge and uncertain — uneasy about what's ahead or whether I'm ready for what's coming.",
+    type: "negative",
+  },
+  {
+    id: "jittery",
+    text: "Jittery",
+    scenario: "There's a restless, keyed-up energy in me — I can't quite settle, like nervous energy is running just below the surface.",
+    type: "negative",
+  },
+  {
+    id: "afraid",
+    text: "Afraid",
+    scenario: "I feel a sense of apprehension — something specific feels threatening and uncertain, and I'm genuinely worried about it.",
+    type: "negative",
+  },
 ];
 
 const PANAS_LABELS = [
@@ -146,6 +246,7 @@ export default function PANASQuizPage() {
           <div key={item.id} id={`q-${item.id}`}>
             <LikertQuestion
               question={item.text}
+              scenario={item.scenario}
               questionNumber={idx + 1}
               name={item.id}
               value={answers[item.id] ?? null}

@@ -2,6 +2,7 @@
 
 interface LikertQuestionProps {
   question: string;
+  scenario?: string;
   questionNumber: number;
   name: string;
   value: number | null;
@@ -19,6 +20,7 @@ const DEFAULT_LABELS = [
 
 export default function LikertQuestion({
   question,
+  scenario,
   questionNumber,
   name,
   value,
@@ -27,10 +29,16 @@ export default function LikertQuestion({
 }: LikertQuestionProps) {
   return (
     <div className="bg-white rounded-xl border border-noctua-border p-5 shadow-sm hover:shadow-md transition-shadow">
-      <p className="text-noctua-black font-medium mb-5 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
+      <p className="text-noctua-black font-semibold mb-1 leading-snug" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
         <span className="text-noctua-brown font-bold mr-2">{questionNumber}.</span>
         {question}
       </p>
+      {scenario && (
+        <p className="text-noctua-black/60 text-sm mb-5 leading-relaxed pl-5" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
+          {scenario}
+        </p>
+      )}
+      {!scenario && <div className="mb-5" />}
 
       {/* Mobile: vertical stacked */}
       <div className="flex flex-col gap-2 sm:hidden">

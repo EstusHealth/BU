@@ -6,18 +6,66 @@ import LikertQuestion from "@/components/LikertQuestion";
 import Link from "next/link";
 
 const QUESTIONS = [
-  { id: "q1", text: "I have a clear understanding of my current monthly income and expenses.", category: "budgeting" },
-  { id: "q2", text: "I consistently track my spending against a budget.", category: "budgeting" },
-  { id: "q3", text: "I have an emergency fund that covers at least 3 months of expenses.", category: "savings" },
-  { id: "q4", text: "I understand the difference between a Roth IRA and a traditional 401(k).", category: "investing" },
-  { id: "q5", text: "I know my current credit score and what factors affect it.", category: "credit" },
-  { id: "q6", text: "I understand how compound interest works and how it applies to both savings and debt.", category: "debt" },
-  { id: "q7", text: "I feel confident in my ability to negotiate my salary or contract rate.", category: "income" },
-  { id: "q8", text: "I understand the basic tax implications of being self-employed or an independent contractor.", category: "taxes" },
-  { id: "q9", text: "I know the difference between income-driven repayment plans for student loans.", category: "debt" },
-  { id: "q10", text: "I have a plan for how I will manage my student loan debt after graduation.", category: "debt" },
-  { id: "q11", text: "I understand what malpractice insurance is and why OTs may need it.", category: "insurance" },
-  { id: "q12", text: "I feel comfortable making financial decisions without needing someone else to explain them.", category: "confidence" },
+  {
+    id: "q1",
+    text: "I could sit down right now and tell you exactly what my monthly income is — stipends, part-time work, loans — and where every dollar actually goes.",
+    category: "budgeting",
+  },
+  {
+    id: "q2",
+    text: "Each month I check my actual spending against a real budget — not just roughly in my head, but with a system I actually use.",
+    category: "budgeting",
+  },
+  {
+    id: "q3",
+    text: "If an unexpected $1,500 expense hit me today — a car repair, a medical bill — I could cover it without going into new debt, because I have an emergency fund.",
+    category: "savings",
+  },
+  {
+    id: "q4",
+    text: "If a classmate asked me to explain the difference between a Roth IRA and a traditional 401(k) — including which might make more sense for a new-grad OT — I could do it clearly.",
+    category: "investing",
+  },
+  {
+    id: "q5",
+    text: "I know my current credit score right now, I know what specific factors are affecting it, and I know what I'd need to do to improve it.",
+    category: "credit",
+  },
+  {
+    id: "q6",
+    text: "I understand exactly how compound interest snowballs over time — and I'm fully aware of how it is working against me in my student loans right now.",
+    category: "debt",
+  },
+  {
+    id: "q7",
+    text: "If a hospital offered me a salaried position and a private practice offered me a 1099 contract rate, I would know how to compare them and confidently negotiate either.",
+    category: "income",
+  },
+  {
+    id: "q8",
+    text: "I understand what quarterly estimated taxes, self-employment tax, and Schedule C filing mean — and how they'd apply the moment I started my own OT practice.",
+    category: "taxes",
+  },
+  {
+    id: "q9",
+    text: "I could explain the real differences between SAVE, PAYE, and IBR income-driven repayment plans to a classmate who just graduated and needed to pick one.",
+    category: "debt",
+  },
+  {
+    id: "q10",
+    text: "I have a written, realistic plan for how I will handle my student loans in my first year after graduation — not just a vague intention to 'figure it out later.'",
+    category: "debt",
+  },
+  {
+    id: "q11",
+    text: "I understand what malpractice insurance covers, what it typically costs for OTs, and how my coverage needs would change if I moved from employee to sole practitioner.",
+    category: "insurance",
+  },
+  {
+    id: "q12",
+    text: "When financial decisions come up — refinancing, retirement contributions, contract terms — I feel genuinely confident making them on my own without needing someone else to walk me through it.",
+    category: "confidence",
+  },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
