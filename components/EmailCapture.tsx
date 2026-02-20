@@ -58,15 +58,15 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center animate-fadeIn">
-        <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-8 text-center animate-fadeIn">
+        <div className="w-14 h-14 bg-noctua-tan rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-7 h-7 text-noctua-brown" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-green-800 mb-2">You&apos;re on the list!</h3>
-        <p className="text-green-700 mb-1">Check your email for your <strong>{guideName}</strong>.</p>
-        <p className="text-sm text-green-600 mt-3 bg-green-100 rounded-lg px-4 py-2 inline-block">
+        <h3 className="text-xl font-bold text-noctua-black mb-2">You&apos;re on the list!</h3>
+        <p className="text-noctua-black/70 mb-1">Check your email for your <strong>{guideName}</strong>.</p>
+        <p className="text-sm text-noctua-brown mt-3 bg-noctua-tan rounded-lg px-4 py-2 inline-block">
           Your guide is ready for download — Liam will follow up shortly!
         </p>
       </div>
@@ -74,22 +74,22 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
   }
 
   return (
-    <div className="bg-blue-50 border border-blue-200 rounded-xl p-8">
+    <div className="bg-noctua-cream border border-noctua-border rounded-xl p-8">
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-          <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <div className="w-10 h-10 bg-noctua-brown rounded-full flex items-center justify-center flex-shrink-0">
+          <svg className="w-5 h-5 text-noctua-cream" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-slate-800">Get your free {guideName}</h3>
-          <p className="text-slate-600 text-sm">Enter your email and we&apos;ll send it right over.</p>
+          <h3 className="text-xl font-bold text-noctua-black">Get your free {guideName}</h3>
+          <p className="text-noctua-black/70 text-sm" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>Enter your email and we&apos;ll send it right over.</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="email-capture-email" className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="email-capture-email" className="block text-sm font-medium text-noctua-black mb-1">
             Email address <span className="text-red-500">*</span>
           </label>
           <input
@@ -99,13 +99,13 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
             required
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder-slate-400 bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-noctua-border focus:border-noctua-brown focus:ring-2 focus:ring-noctua-brown/20 outline-none transition-all text-noctua-black placeholder-noctua-black/40 bg-white"
           />
         </div>
 
         <div>
-          <label htmlFor="email-capture-name" className="block text-sm font-medium text-slate-700 mb-1">
-            Your name <span className="text-slate-400">(optional)</span>
+          <label htmlFor="email-capture-name" className="block text-sm font-medium text-noctua-black mb-1">
+            Your name <span className="text-noctua-black/40">(optional)</span>
           </label>
           <input
             id="email-capture-name"
@@ -113,7 +113,7 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="First name"
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder-slate-400 bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-noctua-border focus:border-noctua-brown focus:ring-2 focus:ring-noctua-brown/20 outline-none transition-all text-noctua-black placeholder-noctua-black/40 bg-white"
           />
         </div>
 
@@ -126,7 +126,7 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-noctua-brown hover:bg-noctua-brown-dark disabled:opacity-60 text-noctua-cream font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           {loading ? (
             <>
@@ -146,7 +146,7 @@ export default function EmailCapture({ quizName, guideName }: EmailCaptureProps)
           )}
         </button>
 
-        <p className="text-xs text-slate-500 text-center">
+        <p className="text-xs text-noctua-black/50 text-center">
           No spam, ever. Unsubscribe any time.
         </p>
       </form>

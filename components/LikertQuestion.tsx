@@ -26,9 +26,9 @@ export default function LikertQuestion({
   labels = DEFAULT_LABELS,
 }: LikertQuestionProps) {
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-shadow">
-      <p className="text-slate-800 font-medium mb-5 leading-relaxed">
-        <span className="text-blue-600 font-bold mr-2">{questionNumber}.</span>
+    <div className="bg-white rounded-xl border border-noctua-border p-5 shadow-sm hover:shadow-md transition-shadow">
+      <p className="text-noctua-black font-medium mb-5 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
+        <span className="text-noctua-brown font-bold mr-2">{questionNumber}.</span>
         {question}
       </p>
 
@@ -42,8 +42,8 @@ export default function LikertQuestion({
               key={score}
               className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
                 selected
-                  ? "bg-blue-600 border-blue-600 text-white"
-                  : "border-slate-200 hover:bg-blue-50 hover:border-blue-300 text-slate-700"
+                  ? "bg-noctua-brown border-noctua-brown text-noctua-cream"
+                  : "border-noctua-border hover:bg-noctua-tan hover:border-noctua-brown text-noctua-black"
               }`}
             >
               <input
@@ -55,7 +55,7 @@ export default function LikertQuestion({
                 className="sr-only"
               />
               <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 border-2 ${
-                selected ? "border-white bg-white text-blue-600" : "border-slate-300 text-slate-500"
+                selected ? "border-noctua-cream bg-noctua-cream text-noctua-brown" : "border-noctua-border text-noctua-black/60"
               }`}>
                 {score}
               </span>
@@ -68,8 +68,8 @@ export default function LikertQuestion({
       {/* Desktop: horizontal */}
       <div className="hidden sm:block">
         <div className="flex justify-between mb-2 px-1">
-          <span className="text-xs text-slate-500 font-medium">{labels[0]}</span>
-          <span className="text-xs text-slate-500 font-medium">{labels[labels.length - 1]}</span>
+          <span className="text-xs text-noctua-black/50 font-medium">{labels[0]}</span>
+          <span className="text-xs text-noctua-black/50 font-medium">{labels[labels.length - 1]}</span>
         </div>
         <div className="flex gap-2 justify-between">
           {labels.map((label, idx) => {
@@ -91,12 +91,12 @@ export default function LikertQuestion({
                 />
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all hover:scale-110 ${
                   selected
-                    ? "bg-blue-600 border-blue-600 text-white shadow-md"
-                    : "border-slate-300 text-slate-500 hover:border-blue-400 hover:bg-blue-50"
+                    ? "bg-noctua-brown border-noctua-brown text-noctua-cream shadow-md"
+                    : "border-noctua-border text-noctua-black/60 hover:border-noctua-brown hover:bg-noctua-tan"
                 }`}>
                   {score}
                 </div>
-                <span className="text-xs text-slate-500 text-center leading-tight hidden lg:block w-16">
+                <span className="text-xs text-noctua-black/50 text-center leading-tight hidden lg:block w-16">
                   {label}
                 </span>
               </label>
@@ -106,7 +106,7 @@ export default function LikertQuestion({
       </div>
 
       {value === null && (
-        <p className="text-xs text-slate-400 mt-3 italic">Please select an answer</p>
+        <p className="text-xs text-noctua-black/40 mt-3 italic">Please select an answer</p>
       )}
     </div>
   );

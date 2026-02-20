@@ -52,11 +52,11 @@ function NumberInput({
 }) {
   return (
     <div>
-      <label className="block text-sm font-semibold text-slate-700 mb-1">{label}</label>
-      {hint && <p className="text-xs text-slate-500 mb-1.5">{hint}</p>}
+      <label className="block text-sm font-semibold text-noctua-black mb-1">{label}</label>
+      {hint && <p className="text-xs text-noctua-black/50 mb-1.5">{hint}</p>}
       <div className="relative flex items-center">
         {prefix && (
-          <span className="absolute left-3 text-slate-500 font-medium text-sm pointer-events-none">{prefix}</span>
+          <span className="absolute left-3 text-noctua-black/50 font-medium text-sm pointer-events-none">{prefix}</span>
         )}
         <input
           type="number"
@@ -66,10 +66,10 @@ function NumberInput({
           min={min}
           max={max}
           step={step ?? 1}
-          className={`w-full py-3 border border-slate-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 bg-white ${prefix ? "pl-8 pr-4" : suffix ? "pl-4 pr-10" : "px-4"}`}
+          className={`w-full py-3 border border-noctua-border rounded-lg focus:border-noctua-brown focus:ring-2 focus:ring-noctua-brown/20 outline-none transition-all text-noctua-black bg-white ${prefix ? "pl-8 pr-4" : suffix ? "pl-4 pr-10" : "px-4"}`}
         />
         {suffix && (
-          <span className="absolute right-3 text-slate-500 font-medium text-sm pointer-events-none">{suffix}</span>
+          <span className="absolute right-3 text-noctua-black/50 font-medium text-sm pointer-events-none">{suffix}</span>
         )}
       </div>
     </div>
@@ -79,10 +79,10 @@ function NumberInput({
 // ---- Result card ----
 function ResultCard({ label, value, sub, highlight }: { label: string; value: string; sub?: string; highlight?: boolean }) {
   return (
-    <div className={`rounded-xl p-4 border ${highlight ? "bg-blue-50 border-blue-200" : "bg-slate-50 border-slate-200"}`}>
-      <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1">{label}</p>
+    <div className={`rounded-xl p-4 border ${highlight ? "bg-noctua-cream border-noctua-border" : "bg-noctua-cream-light border-noctua-border"}`}>
+      <p className="text-xs font-semibold text-noctua-black/50 uppercase tracking-wide mb-1">{label}</p>
       <p className={`text-xl font-extrabold ${highlight ? "text-blue-700" : "text-slate-800"}`}>{value}</p>
-      {sub && <p className="text-xs text-slate-500 mt-0.5">{sub}</p>}
+      {sub && <p className="text-xs text-noctua-black/50 mt-0.5">{sub}</p>}
     </div>
   );
 }
@@ -166,7 +166,7 @@ export default function LoanCalculatorPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
-      <Link href="/" className="inline-flex items-center gap-1 text-slate-500 hover:text-blue-600 text-sm mb-6 transition-colors">
+      <Link href="/" className="inline-flex items-center gap-1 text-noctua-black/60 hover:text-noctua-brown text-sm mb-6 transition-colors">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
@@ -174,20 +174,20 @@ export default function LoanCalculatorPage() {
       </Link>
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-rose-600 to-pink-600 rounded-2xl p-8 text-white mb-8">
-        <div className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
+      <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-8 text-noctua-cream mb-8">
+        <div className="inline-block bg-white/20 text-noctua-cream text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
           Financial Tool
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">Student Loan Payoff Calculator</h1>
-        <p className="text-rose-100 leading-relaxed">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
           Compare repayment strategies side by side. Enter your loan details below, then explore each strategy tab.
         </p>
       </div>
 
       {/* Inputs */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 mb-6">
-        <h2 className="text-lg font-bold text-slate-800 mb-5 flex items-center gap-2">
-          <svg className="w-5 h-5 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="bg-white rounded-2xl border border-noctua-border shadow-sm p-6 mb-6">
+        <h2 className="text-lg font-bold text-noctua-black mb-5 flex items-center gap-2">
+          <svg className="w-5 h-5 text-noctua-brown" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
           </svg>
           Your Loan Details
@@ -226,17 +226,17 @@ export default function LoanCalculatorPage() {
       </div>
 
       {/* Strategy tabs */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-6">
+      <div className="bg-white rounded-2xl border border-noctua-border shadow-sm overflow-hidden mb-6">
         {/* Tab bar */}
-        <div className="flex border-b border-slate-200 overflow-x-auto">
+        <div className="flex border-b border-noctua-border overflow-x-auto">
           {TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`flex-shrink-0 px-5 py-4 text-sm font-semibold transition-colors border-b-2 ${
                 activeTab === tab.id
-                  ? "border-rose-500 text-rose-600 bg-rose-50"
-                  : "border-transparent text-slate-600 hover:text-slate-800 hover:bg-slate-50"
+                  ? "border-noctua-brown text-noctua-brown bg-noctua-cream"
+                  : "border-transparent text-noctua-black/70 hover:text-noctua-black hover:bg-noctua-cream-light"
               }`}
             >
               {tab.label}
@@ -249,8 +249,8 @@ export default function LoanCalculatorPage() {
           {activeTab === "standard" && (
             <div className="space-y-5">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-1">Standard 10-Year Repayment</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-xl font-bold text-noctua-black mb-1">Standard 10-Year Repayment</h3>
+                <p className="text-noctua-black/70 text-sm">
                   The federal standard plan: 120 equal monthly payments over 10 years.
                 </p>
               </div>
@@ -262,25 +262,25 @@ export default function LoanCalculatorPage() {
               </div>
 
               {/* Progress bar visual */}
-              <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                <p className="text-sm font-semibold text-slate-700 mb-3">Loan Breakdown</p>
+              <div className="bg-noctua-cream-light rounded-xl p-4 border border-noctua-border">
+                <p className="text-sm font-semibold text-noctua-black mb-3">Loan Breakdown</p>
                 <div className="flex h-8 rounded-full overflow-hidden">
                   <div
-                    className="bg-blue-500 flex items-center justify-center text-xs text-white font-semibold"
+                    className="bg-noctua-brown flex items-center justify-center text-xs text-noctua-cream font-semibold"
                     style={{ width: `${(bal / (bal + std.interest)) * 100}%` }}
                   >
                     Principal
                   </div>
                   <div
-                    className="bg-rose-400 flex items-center justify-center text-xs text-white font-semibold"
+                    className="bg-noctua-brown-dark flex items-center justify-center text-xs text-noctua-cream font-semibold"
                     style={{ width: `${(std.interest / (bal + std.interest)) * 100}%` }}
                   >
                     Interest
                   </div>
                 </div>
-                <div className="flex gap-6 mt-2 text-xs text-slate-600">
-                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block"></span> Principal: {formatCurrency(bal)}</span>
-                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-rose-400 inline-block"></span> Interest: {formatCurrency(std.interest)}</span>
+                <div className="flex gap-6 mt-2 text-xs text-noctua-black/70">
+                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-noctua-brown inline-block"></span> Principal: {formatCurrency(bal)}</span>
+                  <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-full bg-noctua-brown-dark inline-block"></span> Interest: {formatCurrency(std.interest)}</span>
                 </div>
               </div>
             </div>
@@ -290,8 +290,8 @@ export default function LoanCalculatorPage() {
           {activeTab === "extra" && (
             <div className="space-y-5">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-1">Aggressive Extra Payment Strategy</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-xl font-bold text-noctua-black mb-1">Aggressive Extra Payment Strategy</h3>
+                <p className="text-noctua-black/70 text-sm">
                   Pay extra each month beyond your minimum and dramatically reduce total interest paid.
                 </p>
               </div>
@@ -315,33 +315,33 @@ export default function LoanCalculatorPage() {
                 <ResultCard label="Interest Saved" value={formatCurrency(extra.saved)} />
               </div>
 
-              <div className="bg-green-50 border border-green-200 rounded-xl p-4">
-                <p className="font-semibold text-green-800 mb-2">Savings Summary</p>
+              <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-4">
+                <p className="font-semibold text-noctua-black mb-2">Savings Summary</p>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div>
-                    <p className="text-slate-600">Time saved</p>
-                    <p className="font-bold text-slate-800">{isFinite(extra.monthsSaved) ? formatMonths(extra.monthsSaved) : "N/A"}</p>
+                    <p className="text-noctua-black/70">Time saved</p>
+                    <p className="font-bold text-noctua-black">{isFinite(extra.monthsSaved) ? formatMonths(extra.monthsSaved) : "N/A"}</p>
                   </div>
                   <div>
-                    <p className="text-slate-600">Money saved</p>
-                    <p className="font-bold text-green-700">{formatCurrency(extra.saved)}</p>
+                    <p className="text-noctua-black/70">Money saved</p>
+                    <p className="font-bold text-noctua-brown">{formatCurrency(extra.saved)}</p>
                   </div>
                 </div>
               </div>
 
               {/* Comparison */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-                <p className="text-sm font-semibold text-slate-700 mb-3">Comparison vs. Standard Plan</p>
+              <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-4">
+                <p className="text-sm font-semibold text-noctua-black mb-3">Comparison vs. Standard Plan</p>
                 <div className="space-y-2">
                   {[
-                    { label: "Standard Plan", months: std.months, interest: std.interest, color: "bg-slate-300" },
-                    { label: "With Extra Payments", months: extra.months, interest: extra.interest, color: "bg-green-400" },
+                    { label: "Standard Plan", months: std.months, interest: std.interest, color: "bg-noctua-border" },
+                    { label: "With Extra Payments", months: extra.months, interest: extra.interest, color: "bg-noctua-brown" },
                   ].map((plan) => (
                     <div key={plan.label} className="flex items-center gap-3 text-sm">
                       <div className={`w-3 h-3 rounded-full flex-shrink-0 ${plan.color}`} />
-                      <span className="text-slate-600 w-40">{plan.label}</span>
-                      <span className="font-semibold text-slate-800">{isFinite(plan.months) ? formatMonths(plan.months) : "30+ yr"}</span>
-                      <span className="text-slate-500 ml-2">{formatCurrency(plan.interest)} interest</span>
+                      <span className="text-noctua-black/70 w-40">{plan.label}</span>
+                      <span className="font-semibold text-noctua-black">{isFinite(plan.months) ? formatMonths(plan.months) : "30+ yr"}</span>
+                      <span className="text-noctua-black/50 ml-2">{formatCurrency(plan.interest)} interest</span>
                     </div>
                   ))}
                 </div>
@@ -353,8 +353,8 @@ export default function LoanCalculatorPage() {
           {activeTab === "idr" && (
             <div className="space-y-5">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-1">Income-Driven Repayment (IDR)</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-xl font-bold text-noctua-black mb-1">Income-Driven Repayment (IDR)</h3>
+                <p className="text-noctua-black/70 text-sm">
                   Federal IDR plans cap your payment at 10% of discretionary income, with forgiveness after 20 years.
                 </p>
               </div>
@@ -378,37 +378,37 @@ export default function LoanCalculatorPage() {
                 <ResultCard label="Amount Forgiven" value={formatCurrency(idr.forgiven)} />
               </div>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3">
-                <p className="font-semibold text-blue-800">Key Considerations</p>
-                <ul className="text-sm text-blue-900 space-y-2">
+              <div className="bg-noctua-cream border border-noctua-border rounded-xl p-5 space-y-3">
+                <p className="font-semibold text-noctua-black">Key Considerations</p>
+                <ul className="text-sm text-noctua-black/80 space-y-2">
                   <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <svg className="w-4 h-4 text-noctua-brown mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     Payment is recalculated annually based on your income and family size.
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <svg className="w-4 h-4 text-noctua-brown mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     Forgiven amounts may be taxable as income (unless PSLF applies).
                   </li>
                   <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <svg className="w-4 h-4 text-noctua-brown mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <strong>PSLF:</strong> If you work for a nonprofit or government employer, loans may be forgiven after just 10 years (120 payments) — tax-free!
                   </li>
                 </ul>
               </div>
 
               {/* Comparison to standard */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-                <p className="text-sm font-semibold text-slate-700 mb-3">Comparison vs. Standard 10-Year</p>
+              <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-4">
+                <p className="text-sm font-semibold text-noctua-black mb-3">Comparison vs. Standard 10-Year</p>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-slate-500 mb-1">Standard Plan</p>
-                    <p className="font-bold text-slate-800">{formatCurrency(std.pmt)}/mo</p>
-                    <p className="text-slate-500">10 yr · {formatCurrency(std.interest)} interest</p>
+                    <p className="text-noctua-black/50 mb-1">Standard Plan</p>
+                    <p className="font-bold text-noctua-black">{formatCurrency(std.pmt)}/mo</p>
+                    <p className="text-noctua-black/50">10 yr · {formatCurrency(std.interest)} interest</p>
                   </div>
                   <div>
-                    <p className="text-slate-500 mb-1">Income-Driven</p>
-                    <p className="font-bold text-blue-700">{formatCurrency(idr.monthlyPmt)}/mo</p>
-                    <p className="text-slate-500">20 yr · {formatCurrency(idr.forgiven)} forgiven</p>
+                    <p className="text-noctua-black/50 mb-1">Income-Driven</p>
+                    <p className="font-bold text-noctua-brown">{formatCurrency(idr.monthlyPmt)}/mo</p>
+                    <p className="text-noctua-black/50">20 yr · {formatCurrency(idr.forgiven)} forgiven</p>
                   </div>
                 </div>
               </div>
@@ -419,8 +419,8 @@ export default function LoanCalculatorPage() {
           {activeTab === "refi" && (
             <div className="space-y-5">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-1">Refinancing Option</h3>
-                <p className="text-slate-600 text-sm">
+                <h3 className="text-xl font-bold text-noctua-black mb-1">Refinancing Option</h3>
+                <p className="text-noctua-black/70 text-sm">
                   Refinancing at a lower rate can significantly reduce your total interest paid. Note: refinancing federal
                   loans makes you ineligible for federal protections like IDR and PSLF.
                 </p>
@@ -447,9 +447,9 @@ export default function LoanCalculatorPage() {
                 <ResultCard label="Payoff Date" value={addMonths(120)} />
               </div>
 
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
-                <p className="font-semibold text-amber-800 mb-2">⚠️ Before You Refinance</p>
-                <ul className="text-sm text-amber-900 space-y-1.5">
+              <div className="bg-noctua-cream border border-noctua-border rounded-xl p-5">
+                <p className="font-semibold text-noctua-black mb-2">⚠️ Before You Refinance</p>
+                <ul className="text-sm text-noctua-black/80 space-y-1.5">
                   <li>• You lose access to federal income-driven repayment plans</li>
                   <li>• You are no longer eligible for Public Service Loan Forgiveness</li>
                   <li>• Federal forbearance and deferment options may be limited</li>
@@ -458,17 +458,17 @@ export default function LoanCalculatorPage() {
               </div>
 
               {/* Comparison */}
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-                <p className="text-sm font-semibold text-slate-700 mb-3">Rate Comparison</p>
+              <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-4">
+                <p className="text-sm font-semibold text-noctua-black mb-3">Rate Comparison</p>
                 <div className="space-y-3">
                   {[
                     { label: "Current Rate", rate: apr, interest: std.interest, pmt: std.pmt },
                     { label: "Refinanced Rate", rate: parseFloat(refiRate) || 0, interest: refi.interest, pmt: refi.pmt },
                   ].map((plan) => (
                     <div key={plan.label} className="flex flex-wrap gap-4 text-sm">
-                      <span className="text-slate-500 w-36">{plan.label}: <strong className="text-slate-800">{plan.rate}%</strong></span>
-                      <span className="text-slate-600">{formatCurrency(plan.pmt)}/mo</span>
-                      <span className="text-slate-600">{formatCurrency(plan.interest)} total interest</span>
+                      <span className="text-noctua-black/50 w-36">{plan.label}: <strong className="text-noctua-black">{plan.rate}%</strong></span>
+                      <span className="text-noctua-black/70">{formatCurrency(plan.pmt)}/mo</span>
+                      <span className="text-noctua-black/70">{formatCurrency(plan.interest)} total interest</span>
                     </div>
                   ))}
                 </div>
@@ -479,8 +479,8 @@ export default function LoanCalculatorPage() {
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-slate-100 border border-slate-300 rounded-xl px-5 py-4 text-sm text-slate-600 flex items-start gap-3">
-        <svg className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="bg-noctua-cream-light border border-noctua-border rounded-xl px-5 py-4 text-sm text-noctua-black/70 flex items-start gap-3">
+        <svg className="w-5 h-5 text-noctua-black/40 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p>

@@ -136,7 +136,7 @@ function ScoreRing({ score, max, color, label }: { score: number; max: number; c
   const dash = (pct / 100) * circ;
 
   const colorMap: Record<string, string> = {
-    blue: "#2563eb",
+    blue: "#79543A",
     emerald: "#059669",
     amber: "#d97706",
     rose: "#e11d48",
@@ -158,10 +158,10 @@ function ScoreRing({ score, max, color, label }: { score: number; max: number; c
         />
       </svg>
       <div className="-mt-16 flex flex-col items-center">
-        <span className="text-2xl font-extrabold text-slate-800">{score}</span>
-        <span className="text-xs text-slate-500">out of {max}</span>
+        <span className="text-2xl font-extrabold text-noctua-black">{score}</span>
+        <span className="text-xs text-noctua-black/50">out of {max}</span>
       </div>
-      <p className="text-sm font-semibold text-slate-700 mt-8">{label}</p>
+      <p className="text-sm font-semibold text-noctua-black mt-8">{label}</p>
     </div>
   );
 }
@@ -178,36 +178,36 @@ function QuizResultsContent() {
   let quizName = "Quiz";
   let guideName = "Guide";
   let resultContent: React.ReactNode = null;
-  let accentColor = "bg-blue-600";
+  let accentColor = "bg-noctua-brown";
 
   if (quiz === "leadership") {
     quizName = "Leadership Quiz";
     guideName = "Leadership Styles Guide";
     const data = LEADERSHIP_RESULTS[result] || LEADERSHIP_RESULTS.transformational;
-    accentColor = "bg-blue-600";
+    accentColor = "bg-noctua-brown";
     resultContent = (
       <div className="space-y-6 animate-fadeIn">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-7 text-white">
-          <p className="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-2">Your Leadership Style</p>
+        <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-7 text-noctua-cream">
+          <p className="text-noctua-cream/70 text-sm font-semibold uppercase tracking-wider mb-2">Your Leadership Style</p>
           <h2 className="text-3xl font-extrabold mb-3">{data.title}</h2>
-          <p className="text-blue-100 leading-relaxed">{data.description}</p>
+          <p className="text-noctua-cream/80 leading-relaxed">{data.description}</p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-800 mb-4">Key Characteristics</h3>
+        <div className="bg-white rounded-2xl border border-noctua-border p-6">
+          <h3 className="font-bold text-noctua-black mb-4">Key Characteristics</h3>
           <div className="grid grid-cols-2 gap-3">
             {data.traits.map((trait) => (
-              <div key={trait} className="flex items-center gap-2 text-sm text-slate-700">
-                <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0" />
+              <div key={trait} className="flex items-center gap-2 text-sm text-noctua-black/80">
+                <div className="w-2 h-2 rounded-full bg-noctua-brown flex-shrink-0" />
                 {trait}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
-          <p className="font-semibold text-blue-800 mb-1">💡 OT Entrepreneur Tip</p>
-          <p className="text-blue-900 text-sm">{data.tip}</p>
+        <div className="bg-noctua-cream border border-noctua-border rounded-xl p-5">
+          <p className="font-semibold text-noctua-black mb-1">💡 OT Entrepreneur Tip</p>
+          <p className="text-noctua-black/80 text-sm">{data.tip}</p>
         </div>
       </div>
     );
@@ -217,14 +217,14 @@ function QuizResultsContent() {
     quizName = "Financial Literacy Quiz";
     guideName = "Financial Literacy Masterclass for OTs";
     const data = getFinancialResult(score);
-    accentColor = "bg-emerald-600";
+    accentColor = "bg-noctua-brown";
     resultContent = (
       <div className="space-y-6 animate-fadeIn">
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-7 text-white">
-          <p className="text-emerald-200 text-sm font-semibold uppercase tracking-wider mb-2">Your Financial Readiness Score</p>
+        <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-7 text-noctua-cream">
+          <p className="text-noctua-cream/70 text-sm font-semibold uppercase tracking-wider mb-2">Your Financial Readiness Score</p>
           <div className="flex items-end gap-4 mb-3">
             <span className="text-6xl font-extrabold">{score}</span>
-            <span className="text-emerald-300 text-2xl font-bold mb-2">/ 100</span>
+            <span className="text-noctua-cream/70 text-2xl font-bold mb-2">/ 100</span>
           </div>
           <div className="w-full bg-white/20 rounded-full h-3 mb-3">
             <div
@@ -232,12 +232,12 @@ function QuizResultsContent() {
               style={{ width: `${score}%` }}
             />
           </div>
-          <p className="text-emerald-100 font-semibold">{data.label}</p>
+          <p className="text-noctua-cream/90 font-semibold">{data.label}</p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-800 mb-3">What This Means</h3>
-          <p className="text-slate-700 leading-relaxed">{data.interpretation}</p>
+        <div className="bg-white rounded-2xl border border-noctua-border p-6">
+          <h3 className="font-bold text-noctua-black mb-3">What This Means</h3>
+          <p className="text-noctua-black/80 leading-relaxed">{data.interpretation}</p>
         </div>
       </div>
     );
@@ -248,22 +248,22 @@ function QuizResultsContent() {
     guideName = "Find Your OT Niche Guide";
     const primary = OT_AREA_RESULTS[result] || OT_AREA_RESULTS.clinical;
     const secondary = OT_AREA_RESULTS[second];
-    accentColor = "bg-violet-600";
+    accentColor = "bg-noctua-brown";
     resultContent = (
       <div className="space-y-6 animate-fadeIn">
-        <div className="bg-gradient-to-r from-violet-600 to-purple-700 rounded-2xl p-7 text-white">
-          <p className="text-violet-200 text-sm font-semibold uppercase tracking-wider mb-2">Your Primary OT Specialization</p>
+        <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-7 text-noctua-cream">
+          <p className="text-noctua-cream/70 text-sm font-semibold uppercase tracking-wider mb-2">Your Primary OT Specialization</p>
           <h2 className="text-3xl font-extrabold mb-3">{primary.title}</h2>
-          <p className="text-violet-100 leading-relaxed">{primary.description}</p>
+          <p className="text-noctua-cream/80 leading-relaxed">{primary.description}</p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-800 mb-3">Why This Fits You</h3>
-          <p className="text-slate-700 leading-relaxed mb-5">{primary.why}</p>
-          <h3 className="font-bold text-slate-800 mb-3">Common Work Settings</h3>
+        <div className="bg-white rounded-2xl border border-noctua-border p-6">
+          <h3 className="font-bold text-noctua-black mb-3">Why This Fits You</h3>
+          <p className="text-noctua-black/80 leading-relaxed mb-5">{primary.why}</p>
+          <h3 className="font-bold text-noctua-black mb-3">Common Work Settings</h3>
           <div className="flex flex-wrap gap-2">
             {primary.settings.map((s) => (
-              <span key={s} className="bg-violet-50 border border-violet-200 text-violet-800 text-sm px-3 py-1 rounded-full font-medium">
+              <span key={s} className="bg-noctua-cream border border-noctua-border text-noctua-brown text-sm px-3 py-1 rounded-full font-medium">
                 {s}
               </span>
             ))}
@@ -271,10 +271,10 @@ function QuizResultsContent() {
         </div>
 
         {secondary && (
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-5">
-            <p className="text-slate-500 text-xs font-semibold uppercase tracking-wide mb-2">Secondary Fit</p>
-            <p className="font-bold text-slate-800 mb-1">{secondary.title}</p>
-            <p className="text-slate-600 text-sm">{secondary.description}</p>
+          <div className="bg-noctua-cream-light border border-noctua-border rounded-xl p-5">
+            <p className="text-noctua-black/50 text-xs font-semibold uppercase tracking-wide mb-2">Secondary Fit</p>
+            <p className="font-bold text-noctua-black mb-1">{secondary.title}</p>
+            <p className="text-noctua-black/70 text-sm">{secondary.description}</p>
           </div>
         )}
       </div>
@@ -285,11 +285,11 @@ function QuizResultsContent() {
     quizName = "PANAS Quiz";
     guideName = "Building Better Emotional Habits Guide";
     const { posDesc, negDesc } = getPANASInterpretation(positive, negative);
-    accentColor = "bg-amber-500";
+    accentColor = "bg-noctua-brown";
     resultContent = (
       <div className="space-y-6 animate-fadeIn">
-        <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-7 text-white">
-          <p className="text-amber-100 text-sm font-semibold uppercase tracking-wider mb-4">Your PANAS Results</p>
+        <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-7 text-noctua-cream">
+          <p className="text-noctua-cream/70 text-sm font-semibold uppercase tracking-wider mb-4">Your PANAS Results</p>
           <div className="grid grid-cols-2 gap-8">
             <div className="text-center">
               <ScoreRing score={positive} max={50} color="green" label="Positive Affect" />
@@ -298,7 +298,7 @@ function QuizResultsContent() {
               <ScoreRing score={negative} max={50} color="orange" label="Negative Affect" />
             </div>
           </div>
-          <p className="text-amber-100 text-xs text-center mt-4">
+          <p className="text-noctua-cream/70 text-xs text-center mt-4">
             Average: Positive ~30 · Negative ~15
           </p>
         </div>
@@ -320,9 +320,9 @@ function QuizResultsContent() {
           </div>
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
-          <p className="font-semibold text-amber-800 mb-1">📊 Reference Averages</p>
-          <p className="text-amber-900 text-sm">
+        <div className="bg-noctua-cream border border-noctua-border rounded-xl p-5">
+          <p className="font-semibold text-noctua-black mb-1">📊 Reference Averages</p>
+          <p className="text-noctua-black/80 text-sm">
             Research suggests that healthy adults typically score around <strong>30–35</strong> on positive affect and
             <strong> 10–18</strong> on negative affect. Your scores reflect your emotional state <em>right now</em> — they can change day to day.
           </p>
@@ -335,9 +335,9 @@ function QuizResultsContent() {
     // Fallback
     return (
       <div className="max-w-xl mx-auto px-4 py-20 text-center">
-        <h1 className="text-2xl font-bold text-slate-800 mb-4">No results found</h1>
-        <p className="text-slate-600 mb-6">It looks like you navigated here directly. Please complete a quiz first.</p>
-        <Link href="/" className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-blue-700 transition-colors">
+        <h1 className="text-2xl font-bold text-noctua-black mb-4">No results found</h1>
+        <p className="text-noctua-black/70 mb-6">It looks like you navigated here directly. Please complete a quiz first.</p>
+        <Link href="/" className="bg-noctua-brown text-noctua-cream font-semibold py-3 px-6 rounded-xl hover:bg-noctua-brown-dark transition-colors">
           Back to Home
         </Link>
       </div>
@@ -347,7 +347,7 @@ function QuizResultsContent() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       {/* Back to quiz */}
-      <Link href="/" className="inline-flex items-center gap-1 text-slate-500 hover:text-blue-600 text-sm mb-6 transition-colors">
+      <Link href="/" className="inline-flex items-center gap-1 text-noctua-black/60 hover:text-noctua-brown text-sm mb-6 transition-colors">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
@@ -355,7 +355,7 @@ function QuizResultsContent() {
       </Link>
 
       {/* Congrats banner */}
-      <div className={`${accentColor} rounded-2xl p-4 text-white text-center mb-6 font-semibold`}>
+      <div className={`${accentColor} rounded-2xl p-4 text-noctua-cream text-center mb-6 font-semibold`}>
         ✅ Quiz Complete! Here are your personalized results.
       </div>
 
@@ -364,9 +364,9 @@ function QuizResultsContent() {
 
       {/* Divider */}
       <div className="flex items-center gap-4 my-8">
-        <div className="flex-1 h-px bg-slate-200" />
-        <span className="text-slate-500 text-sm font-medium whitespace-nowrap">Get your free guide</span>
-        <div className="flex-1 h-px bg-slate-200" />
+        <div className="flex-1 h-px bg-noctua-border" />
+        <span className="text-noctua-black/60 text-sm font-medium whitespace-nowrap">Get your free guide</span>
+        <div className="flex-1 h-px bg-noctua-border" />
       </div>
 
       {/* Email capture */}
@@ -374,7 +374,7 @@ function QuizResultsContent() {
 
       {/* Other tools */}
       <div className="mt-12">
-        <h3 className="text-lg font-bold text-slate-800 mb-4">Explore More Tools</h3>
+        <h3 className="text-lg font-bold text-noctua-black mb-4">Explore More Tools</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             { href: "/leadership-quiz", label: "Leadership Quiz", emoji: "🏆" },
@@ -389,11 +389,11 @@ function QuizResultsContent() {
               <Link
                 key={tool.href}
                 href={tool.href}
-                className="flex items-center gap-3 bg-white border border-slate-200 hover:border-blue-300 hover:bg-blue-50 rounded-xl p-4 transition-all group"
+                className="flex items-center gap-3 bg-white border border-noctua-border hover:border-noctua-brown hover:bg-noctua-cream rounded-xl p-4 transition-all group"
               >
                 <span className="text-2xl">{tool.emoji}</span>
-                <span className="font-medium text-slate-700 group-hover:text-blue-700 transition-colors text-sm">{tool.label}</span>
-                <svg className="w-4 h-4 text-slate-400 group-hover:text-blue-500 ml-auto transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <span className="font-medium text-noctua-black group-hover:text-noctua-brown transition-colors text-sm">{tool.label}</span>
+                <svg className="w-4 h-4 text-noctua-black/40 group-hover:text-noctua-brown ml-auto transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </Link>

@@ -88,28 +88,28 @@ export default function PANASQuizPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-      <Link href="/" className="inline-flex items-center gap-1 text-slate-500 hover:text-blue-600 text-sm mb-6 transition-colors">
+      <Link href="/" className="inline-flex items-center gap-1 text-noctua-black/60 hover:text-noctua-brown text-sm mb-6 transition-colors">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
         Back to Home
       </Link>
 
-      <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-8 text-white mb-8">
-        <div className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
+      <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-8 text-noctua-cream mb-8">
+        <div className="inline-block bg-white/20 text-noctua-cream text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
           Emotional Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">Your Positive &amp; Negative Affect Profile</h1>
-        <p className="text-amber-100 leading-relaxed">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
           The PANAS (Positive and Negative Affect Schedule) is a validated 20-item scale that measures your current
           emotional state. Below you&apos;ll see 20 words describing different feelings and emotions.
         </p>
-        <div className="mt-4 bg-white/20 rounded-xl px-5 py-3 border border-white/30">
-          <p className="text-sm font-semibold text-amber-50">
+        <div className="mt-4 bg-white/15 rounded-xl px-5 py-3 border border-white/30">
+          <p className="text-sm font-semibold text-noctua-cream">
             📌 Indicate to what extent you feel this way <strong>right now, at this moment</strong>.
           </p>
         </div>
-        <div className="mt-3 flex flex-wrap gap-4 text-sm text-amber-100">
+        <div className="mt-3 flex flex-wrap gap-4 text-sm text-noctua-cream/80">
           <span>⏱ ~5 minutes</span>
           <span>📋 {total} words to rate</span>
           <span>📊 Two separate scores</span>
@@ -117,14 +117,14 @@ export default function PANASQuizPage() {
       </div>
 
       {answered > 0 && (
-        <div className="mb-6 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-          <div className="flex justify-between text-sm text-slate-600 mb-2">
+        <div className="mb-6 bg-white rounded-xl border border-noctua-border p-4 shadow-sm">
+          <div className="flex justify-between text-sm text-noctua-black/70 mb-2">
             <span className="font-medium">Your progress</span>
-            <span className="font-semibold text-amber-600">{answered}/{total} rated</span>
+            <span className="font-semibold text-noctua-brown">{answered}/{total} rated</span>
           </div>
-          <div className="w-full bg-slate-200 rounded-full h-2.5">
+          <div className="w-full bg-noctua-muted rounded-full h-2.5">
             <div
-              className="bg-amber-500 h-2.5 rounded-full transition-all duration-500"
+              className="bg-noctua-brown h-2.5 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -132,7 +132,7 @@ export default function PANASQuizPage() {
       )}
 
       {/* Instructions */}
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm text-amber-800">
+      <div className="bg-noctua-cream border border-noctua-border rounded-xl p-4 mb-6 text-sm text-noctua-brown">
         <p className="font-semibold mb-1">How to respond:</p>
         <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
           {PANAS_LABELS.map((label, i) => (
@@ -164,14 +164,14 @@ export default function PANASQuizPage() {
 
       <button
         onClick={handleSubmit}
-        className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+        className="w-full bg-noctua-brown hover:bg-noctua-brown-dark text-noctua-cream font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2"
       >
         See My PANAS Results
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
       </button>
-      <p className="text-center text-sm text-slate-500 mt-3">
+      <p className="text-center text-sm text-noctua-black/60 mt-3">
         You&apos;ll see your positive and negative affect scores on the next page.
       </p>
     </div>

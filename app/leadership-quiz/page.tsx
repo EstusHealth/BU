@@ -82,7 +82,7 @@ export default function LeadershipQuizPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
       {/* Back link */}
-      <Link href="/" className="inline-flex items-center gap-1 text-slate-500 hover:text-blue-600 text-sm mb-6 transition-colors">
+      <Link href="/" className="inline-flex items-center gap-1 text-noctua-black/60 hover:text-noctua-brown text-sm mb-6 transition-colors">
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
@@ -90,16 +90,16 @@ export default function LeadershipQuizPage() {
       </Link>
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white mb-8">
-        <div className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
+      <div className="bg-gradient-to-r from-noctua-brown-dark to-noctua-brown rounded-2xl p-8 text-noctua-cream mb-8">
+        <div className="inline-block bg-white/20 text-noctua-cream text-xs font-semibold px-3 py-1 rounded-full mb-4 border border-white/30">
           Leadership Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">What&apos;s Your Leadership Style?</h1>
-        <p className="text-blue-100 leading-relaxed">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
           Discover your natural leadership approach and how to leverage it as an OT entrepreneur. Rate each statement
           honestly — there are no right or wrong answers.
         </p>
-        <div className="mt-4 flex flex-wrap gap-4 text-sm text-blue-100">
+        <div className="mt-4 flex flex-wrap gap-4 text-sm text-noctua-cream/80">
           <span>⏱ ~5 minutes</span>
           <span>📋 {total} questions</span>
           <span>🎯 Identifies your top style</span>
@@ -108,14 +108,14 @@ export default function LeadershipQuizPage() {
 
       {/* Progress bar */}
       {answered > 0 && (
-        <div className="mb-6 bg-white rounded-xl border border-slate-200 p-4 shadow-sm">
-          <div className="flex justify-between text-sm text-slate-600 mb-2">
+        <div className="mb-6 bg-white rounded-xl border border-noctua-border p-4 shadow-sm">
+          <div className="flex justify-between text-sm text-noctua-black/70 mb-2">
             <span className="font-medium">Your progress</span>
-            <span className="font-semibold text-blue-600">{answered}/{total} answered</span>
+            <span className="font-semibold text-noctua-brown">{answered}/{total} answered</span>
           </div>
-          <div className="w-full bg-slate-200 rounded-full h-2.5">
+          <div className="w-full bg-noctua-muted rounded-full h-2.5">
             <div
-              className="bg-blue-600 h-2.5 rounded-full transition-all duration-500"
+              className="bg-noctua-brown h-2.5 rounded-full transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -147,14 +147,14 @@ export default function LeadershipQuizPage() {
       {/* Submit */}
       <button
         onClick={handleSubmit}
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+        className="w-full bg-noctua-brown hover:bg-noctua-brown-dark text-noctua-cream font-bold py-4 px-8 rounded-xl text-lg transition-colors shadow-md hover:shadow-lg flex items-center justify-center gap-2"
       >
         See My Leadership Style
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
       </button>
-      <p className="text-center text-sm text-slate-500 mt-3">
+      <p className="text-center text-sm text-noctua-black/60 mt-3">
         You&apos;ll see your results and get a free guide on the next page.
       </p>
     </div>
