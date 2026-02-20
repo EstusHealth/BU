@@ -79,7 +79,7 @@ export default function FinancialLiteracyQuizPage() {
           Financial Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">Your Financial Readiness Score</h1>
-        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
           Assess your financial knowledge and readiness as an OT entering practice. Be honest — this is about identifying
           where to grow, not judging where you are.
         </p>

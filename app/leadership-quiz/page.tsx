@@ -95,7 +95,7 @@ export default function LeadershipQuizPage() {
           Leadership Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">What&apos;s Your Leadership Style?</h1>
-        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
           Discover your natural leadership approach and how to leverage it as an OT entrepreneur. Rate each statement
           honestly — there are no right or wrong answers.
         </p>

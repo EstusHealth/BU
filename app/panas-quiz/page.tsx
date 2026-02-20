@@ -100,7 +100,7 @@ export default function PANASQuizPage() {
           Emotional Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">Your Positive &amp; Negative Affect Profile</h1>
-        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
           The PANAS (Positive and Negative Affect Schedule) is a validated 20-item scale that measures your current
           emotional state. Below you&apos;ll see 20 words describing different feelings and emotions.
         </p>

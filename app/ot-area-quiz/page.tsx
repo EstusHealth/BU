@@ -100,7 +100,7 @@ export default function OTAreaQuizPage() {
           Career Fit Assessment
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">What&apos;s Your Ideal OT Area?</h1>
-        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
           Discover which OT specialization aligns best with your values, strengths, and practice preferences.
           Rate each statement honestly — your instincts matter here.
         </p>

@@ -179,7 +179,7 @@ export default function LoanCalculatorPage() {
           Financial Tool
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">Student Loan Payoff Calculator</h1>
-        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}">
+        <p className="text-noctua-cream/80 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", letterSpacing: "normal" }}>
           Compare repayment strategies side by side. Enter your loan details below, then explore each strategy tab.
         </p>
       </div>
